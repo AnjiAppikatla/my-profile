@@ -1,0 +1,59 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box
+}
+
+@import "tailwindcss/preflight";   /* Replaces @tailwind base */
+@import "tailwindcss/utilities";  /* Replaces @tailwind utilities */
+
+
+body{
+  background-color: rgb(0, 0, 0) !important;
+  color: #fff !important;
+  font-family: Poppins;
+}
+.header-row{
+  box-shadow: 2px 1px 12px #383038;
+}
+.footer{
+  background-color: rgb(18, 18, 18);
+}
+
+.nav{
+  li{
+    cursor: pointer;
+    a{
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+  .active{
+    color: oklch(0.438 0.218 303.724);
+    border-bottom: 3px solid oklch(0.438 0.218 303.724)
+  }
+}
+
+.typing-text {
+  font-size: 24px;
+  font-family: 'Poppins', sans-serif;
+  white-space: nowrap;      /* Keep text in one line */
+  overflow: hidden;         /* Hide overflowing characters */
+  border-right: 2px solid transparent; /* Simulate typing cursor */
+  width: 0;                /* Start with no width */
+  animation: typing 7s steps(20) infinite, blink 0.7s infinite;
+}
+
+/* Typing animation */
+@keyframes typing {
+  0% { width: 0; }
+  50% { width: 60%; }
+  100% { width: 0; }
+}
+
+/* Blinking cursor */
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+@import "tailwindcss";
